@@ -15,6 +15,26 @@ Contact : samirbaniya500@gmail.com
 .text-center {
     text-align: center;
 }
+.contact-link{
+    float: right;
+    /* margin-top: 68px; */
+    font-size: 25px; 
+    
+}
+.contact-link ul {
+    list-style-type: none;
+}
+.contact-link ul li {
+    display: inline;
+    padding: 0 1%;
+    font-weight: bold;
+}
+.contact-link ul li a {
+    text-decoration: none;
+    color: #d7182a;
+    font-weight: bold;
+}
+
 .logo {
     width: 15%;
     float: left;

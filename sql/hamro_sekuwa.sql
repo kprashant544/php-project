@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 24, 2023 at 04:45 PM
+-- Generation Time: Mar 07, 2023 at 03:41 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -53,6 +53,26 @@ INSERT INTO `categories` (`id`, `title`, `image_name`, `featured`, `status`) VAL
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contacts`
+--
+
+CREATE TABLE `contacts` (
+  `id` int(10) NOT NULL,
+  `customer_name` varchar(100) NOT NULL,
+  `customer_email` varchar(100) NOT NULL,
+  `customer_feedback` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `customer_name`, `customer_email`, `customer_feedback`) VALUES
+(2, 'Benz', 'food22@outlook.com', 'Best Wishes !');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `orders`
 --
 
@@ -77,7 +97,7 @@ CREATE TABLE `orders` (
 
 INSERT INTO `orders` (`id`, `product_id`, `price`, `quantity`, `total`, `customer_name`, `customer_address`, `customer_email`, `customer_contact`, `customer_feedback`, `order_date`, `product`) VALUES
 (8, 7, '150.00', 474, '71100.00', 'Mara Brown', 'Nihil saepe voluptat', 'zebexaq@mailinator.com', '9887736664', 'Nihil facilis repreh', '2022-11-21 09:07:37', 'chicken pizza'),
-(22, 8, '120.00', 2, '240.00', 'name', 'address', 'sallukhw@gmail.com', '9841558311', '', '2023-02-04 14:53:57', 'chicken '),
+(22, 8, '120.00', 2, '240.00', 'Pedro', 'Thimi', 'sallukhw@gmail.com', '9841558311', '', '2023-02-04 14:53:57', 'chicken '),
 (23, 7, '150.00', 4, '600.00', 'prashant kasula', 'Bhaktapur', 'prashantkasula22@gmail.com', '9805321013', 'hffcg', '2023-02-06 15:00:38', 'chicken pizza'),
 (24, 8, '120.00', 1, '120.00', 'handman', 'Gothatar', 'drake1@gmail.com', '9000000000', 'Good', '2023-02-24 16:03:15', 'pizza');
 
@@ -108,7 +128,9 @@ INSERT INTO `products` (`id`, `title`, `price`, `description`, `category_id`, `f
 (20, 'Chicken Drumstick', '180.00', 'Drooly Drumstick !', 28, 'Yes', 'Yes', 'Product_9071.jpg'),
 (21, 'Grilled Fish', '200.00', 'Super Grilled', 31, 'Yes', 'Yes', 'product_1646.jpg'),
 (22, 'Sausage', '160.00', '', 0, 'Yes', 'Yes', 'product_4759.jpg'),
-(23, 'Pizza', '200.00', 'Crispy Pizza', 10, 'Yes', 'Yes', 'Product_5019.jpg');
+(23, 'Pizza', '200.00', 'Crispy Pizza', 10, 'Yes', 'Yes', 'Product_5019.jpg'),
+(24, 'Sandwich', '190.00', 'Fresh Sandwich !', 32, 'Yes', 'Yes', 'product_1383.jpg'),
+(25, 'Momo', '230.00', 'Juicy Momo Inside', 20, 'Yes', 'Yes', 'product_3482.jpg');
 
 -- --------------------------------------------------------
 
@@ -142,6 +164,12 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `contacts`
+--
+ALTER TABLE `contacts`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
@@ -170,6 +198,12 @@ ALTER TABLE `categories`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
+-- AUTO_INCREMENT for table `contacts`
+--
+ALTER TABLE `contacts`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
@@ -179,7 +213,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `users`
