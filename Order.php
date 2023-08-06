@@ -65,7 +65,7 @@
                     <input class="form-control" type="text" name="name" id="name" required placeholder="E.g.Prashant Kasula">
     
                     <label for="">Email</label>
-                    <input class="form-control" type="text" name="email" id="email" required placeholder="E.g. kasulaprashant544@gmail.com">
+                    <input class="form-control" type="text" name="email" id="email" required placeholder="E.g.kasulaprashant544@gmail.com">
     
                     <label for="">Address</label>
                     <input class="form-control" type="text" name="address" id="address" required placeholder="E.g.Basghari-9,Bhaktapur">
